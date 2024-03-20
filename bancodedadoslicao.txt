@@ -1,0 +1,68 @@
+Quais funções de caracteres você deverá usar pararetornar uma parte específica de uma string decaracteres?
+LETRA B
+
+Selecionar todos os empregados com salário entre1000 e 1500;
+
+select * from SCOTT.EMP
+WHERE SAL BETWEEN '1000' AND '1500';
+
+Exibir todos os empregados com os códigos 7902,7788 e 7876;
+
+select * from SCOTT.EMP d
+WHERE empno in ('7902', '7788', '7876');
+
+Selecionar o código, salário, e salário com bônus de500;
+
+select empno, sal, (sal + 500) sal_bonus from SCOTT.EMP
+
+Mostrar o nome, salário e cargo dos empregadosKing e Turner;
+
+select first_name, salary from SCOTT.EMP d
+WHERE ename in ('King', 'Turner');
+
+Selecionar todos os empregados que tenham ocampo COMM desconhecido;
+
+select * from SCOTT.EMP
+WHERE COMM is null
+
+Exibir nome, salário e cargo de todos osempregados que tenham o nome iniciado pela letraM;
+
+select * from SCOTT.EMP
+WHERE ename like 'M%';
+
+Selecionar todos os empregados que tenham onome iniciado pelas letras A ou J.
+
+select * from SCOTT.EMP
+WHERE ENAME like 'J%' or first_name LIKE 'A%';
+
+Exibir o nome, salário mensal e salário mensalacrescido de um bônus de 700 por mês para todosos empregados que tenham os cargos de ‘analyst’ e‘salesman’
+
+select ENAME, SAL, (SAL + 700) from SCOTT.EMP
+WHERE JOB IN ('ANALYST', 'SALESMAN')
+
+Exibir o número de empregados do departamento10 que receberam comissão.
+
+select * from SCOTT.EMP
+WHERE deptno = '10'
+
+Selecionar o maior salário do departamento 20;
+
+select MAX(SAL) from SCOTT.EMP
+WHERE deptno = '20'
+
+Qual a soma dos salários de todos os empregadosde cargo ‘salesman’?
+
+select SUM(SAL) from SCOTT.EMP
+WHERE job = 'SALESMAN'
+
+Considerando a consulta abaixo, quais nomes sãomostrados?SELECT name FROM employeeWHERE name LIKE '_a%
+LETRA D
+
+Considerando a tabela EMP, quando você executar aseguinte consulta, qual valor será mostrado na primeiralinha?SELECT empno FROM empWHERE deptno = 10 ORDER BY ename desc
+LETRA B
+
+Considere a tabela “lemail” com os campos “codigo, nome eemail”. A SQL correta para fazer uma consulta à todos osemails que pertencem ao domínio “qualquercoisa.com.br”,ordenando-os por nome, é:
+LETRA D
+
+Considere a tabela “lemail” com os campos “codigo, nome eemail”. A SQL correta para fazer uma consulta à todos osemails que pertencem ao domínio “qualquercoisa.com.br”,ordenando-os por nome, é:
+LETRA D
