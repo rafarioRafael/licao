@@ -15,12 +15,14 @@ select * from clientes
 
 create table PRODUTOS (  
   produto_id        number,  
-  nome          	varchar2(50) not null,  
-  valor     		number not null,  
+  nome          	varchar2(50) not null,
+  tipo				varchar2(100) not null,
+  qtd			    number not null,
+  valor_unitario    number not null,  
   constraint pk_produto primary key (produto_id)  
 );
 
-insert into PRODUTOS (produto_id, nome, valor) values (5, 'Microscópio', '700');
+insert into PRODUTOS (produto_id, nome, tipo, qtd, valor_unitario) values (5, 'Escova de dente', 'Higiene', '100', '11');
 select * from produtos;
 
 create table FUNCIONARIOS (  
