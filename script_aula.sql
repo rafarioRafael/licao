@@ -86,3 +86,42 @@ VALUES
 (6, 'Prime Merchants', 'Salvador');
 
 select * from fornecedores;
+
+
+=======================================================================================
+
+10/04/2024
+
+create table student (  
+  student_id    number,  
+  first_name    varchar2(50) not null,  
+  last_name     varchar2(50) not null,
+  birth_date	date not null,
+  start_date  	date not null,
+  constraint pk_student primary key (student_id)  
+);
+
+create table lecturer (
+    lecturer_id	  number,
+    first_name		varchar2(50) not null,
+    last_name		varchar2(50) not null,
+    email			varchar2(50) not null,
+    constraint pk_lecturer primary key (lecturer_id)
+);
+
+create table academic_semester (
+    academic_semester_id	number,
+    calendar_year			number(4),
+    season_term				varchar2(50),
+    constraint pk_academic_semester primary key (academic_semester_id)
+);
+
+create table course_edition (
+    course_id             number,
+    lecturer_id           number,
+    academic_semester_id  number,
+    constraint pk_course_edition primary key (course_id),
+    constraint fk_lecturer foreign key (lecturer_id) references lecturer (lecturer_id),
+    constraint fk_academic_semester foreign key (academic_semester_id) references academic_semester (academic_semester_id)
+);
+
