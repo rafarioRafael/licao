@@ -125,3 +125,13 @@ create table course_edition (
     constraint fk_academic_semester foreign key (academic_semester_id) references academic_semester (academic_semester_id)
 );
 
+===========================================
+
+24/04/2024
+
+INSERT INTO clientes (cliente_id, nome) VALUES (1, 'Tech Solutions Ltda');
+INSERT INTO clientes (cliente_id, nome) VALUES (2, 'Comércio Eletrônico S.A.');
+INSERT INTO clientes (cliente_id, nome) VALUES (3, 'Consultoria Inovadora Ltda');
+INSERT INTO clientes (cliente_id, nome) VALUES (4, 'Serviços Integrados LTDA');
+INSERT INTO clientes (cliente_id, nome) VALUES (5, 'Indústria Moderna S.A.');
+
